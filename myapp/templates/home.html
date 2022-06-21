@@ -1,1 +1,145 @@
-<h1>Hello World</h1>
+{% load static %}
+<html>
+    <style>
+        html{scroll-behavior: smooth}
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Seoyeong's homepage</title>
+        <link rel="icon" href="{% static 'images/penguin.ico' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap" rel="stylesheet">
+        <style>
+            div#header{background-color:midnightblue;position:fixed;z-index:5;width:100%;height:30px; top:0;left:0;text-align:center;line-height:30px}
+            div#header a{font-size:17px;color:white;padding:25px;text-decoration:none;}
+            div#top{height:450px;position: relative;}
+            div#top::before{content:"";background-image: url('static/images/head.jpg'); height:450px; width:100%;background-size:cover;position: absolute;}
+            div#top p{position: relative;}
+            body{font-family: 'Hahmlet', serif;margin:0;padding:0;}
+            table{font-size:32px;}
+            ul{width: 700px; margin-left:650; font-size:25px; line-height:60px;}
+            h1{font-size:70px; text-align: center; text-decoration: underline; text-underline-position:under; text-decoration-style: wavy; text-decoration-thickness: 3px;}
+        </style>
+ 
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="#0">Profile</a>
+            <a href="#1">Character</a>
+            <a href="#2">Hobby</a>
+            <a href="#3">Want</a>
+        </div>
+        <div id="top"><p style="color:midnightblue; font-size:60px;;">About me</p>
+        <p style="font-size:80px; line-height: 400px; text-align: center"><b>Hello, I'm SeoYoung!</b></p> 
+        <img id="0" src="{% static 'images/증명사진.jpg' %}" style="margin-left:470px; margin-top:-180px; margin-right:30px; width:300px; height:300px; border:7px solid midnightblue; border-radius:100px;"/>
+        <img src="{% static 'images/이미지2.jpeg' %}" style="margin-top:-180px; width:300px; height:300px; border:7px solid midnightblue; border-radius:100px;"/>
+        <br/><br/><br/>
+        <table border="4" bordercolor="gray" width="700" height="300" align = "center">
+            <caption style="font-size:50px"><b>PROFILE</b></caption>
+            <tr>
+                <th>이름</th>
+                <th>이서영</th>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <th>2000.04.25</th>    
+            </tr>
+            <tr>
+                <th>학교</th>
+                <th>단국대학교</th>
+            </tr>
+            <tr>
+                <th>학과</th>
+                <th>정보통계학과</th>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <th>soongjun3@naver.com</th>
+            </tr>
+        </table><br><br><br><br><br><br><br><br>
+        <div style="background-color:midnightblue;z-index:-2;">
+        <br id="1">
+        <h1 style="color:white"> Character </h1>
+        <img src="{% static 'images/good.png' %}" style="border-radius:150px; margin-left:400px; margin-top:50px; width:170px; height:170px; border:3px solid black" align="left">
+        <ul style="color:white">
+            <li>꼼꼼합니다.</li>
+            <li>신중합니다.</li>
+            <li>책임감이 강합니다.</li>
+            <li>솔직합니다.</li>
+        </ul><br><br>
+        <img src="{% static 'images/bad.png' %}" style="border-radius:150px; margin-left:400px; margin-top:50px; width:170px; height:170px; border:3px solid black" align="left">
+        <ul style="color:white">
+            <li>일을 수행할 때 시간이 오래 걸리는 편입니다.</li>
+            <li>낯을 많이 가립니다.</li>
+            <li>무뚝뚝하고 표현을 잘 못합니다.</li>
+        </ul><br><br><br></div>
+        <div style="background-color:white;z-index:-2">
+        <br id="2">
+        <h1 style="color:midnightblue"><b> Hobby </b></h1>
+        <h2 style="text-align: center; font-size:50px"><i>"영화, 음악감상"</i></h2>
+        <p style="text-align: center; font-size:23px">엄청난 집순이인 저는 집에서 보내는 많은데요, 주로 재밌는 영화를 보거나 노래를 들으면서 시간을 보냅니다!</p>
+        <div style="margin-left:500px; font-size:20; ">
+            <a href="#4" style="padding:100px;"><ins>🎬영화추천🎬</ins></a>
+            <a href="#5"><ins>🎵노래추천🎵</ins></a>
+        </div><br><br><br><br>
+        <h2 style="text-align: center; font-size:50px"><i>"혼자 여행하기"</i></h2>
+        <p style="text-align: center; font-size:23px">여럿이 가는 여행도 좋지만 혼자하는 여행은 누군가에게 맞출 필요없이 내가 가고 싶을 때 가고, 쉬고 싶을 때 쉴 수 있고<br> 
+        여러가지 생각으로 차있던 머릿속을 비우고, 나와 여행에만 집중할 수 있기 때문에 좋아합니다.</p><br><br><br><br><hr>
+        
+        <br id="4"><br><br><br><h2 style="font-size:40px; text-align: center;"><b>-<ins>재밌게 본 영화</ins>-</b></h2>
+        <table width="1000" align = "center">
+            <tr>
+                <th><a href="https://youtu.be/KxDbaP-k6i4"><img src="{% static 'images/movie1.jpg' %}" style="border:4px solid midnightblue"></a></th>
+                <th><a href="https://youtu.be/LmS5KMJTWlA"><img src="{% static 'images/movie2.jpg' %}" style="border:4px solid midnightblue"></a></th>
+                <th><a href="https://tv.naver.com/v/5685312"><img src="{% static 'images/movie3.jpg' %}" style="border:4px solid midnightblue"></a></th>
+                <th><a href="https://tv.naver.com/v/5692263"><img src="{% static 'images/movie4.jpg' %}" style="border:4px solid midnightblue"></a></th>
+            </tr>
+            <tr>
+                <th>해리포터</th>
+                <th>코코</th>
+                <th>클래식</th>
+                <th>타짜</th>
+            </tr>
+        </table>
+        <p style="font-size:20px; text-align: center;">*사진을 누르면 영화 예고편으로 이동합니다.</p><br><br>
+        <br id="5"><br><br><br><br><h2 style="font-size:40px; text-align: center;"><b>-<ins>요즘 듣는 노래</ins>-</b></h2>
+        <table width="900" align = "center">
+            <tr>
+                <th><a href="https://youtu.be/Y8JFxS1HlDo"><img src="{% static 'images/music1.jpeg' %}" style="border:4px solid midnightblue; width:230px; height:230px"></a></th>
+                <th><a href="https://youtu.be/SK6Sm2Ki9tI"><img src="{% static 'images/music2.jpeg' %}" style="border:4px solid midnightblue; width:230px; height:230px"></a></th>
+                <th><a href="https://youtu.be/boUl0jPZMdg"><img src="{% static 'images/music3.jpg' %}" style="border:4px solid midnightblue; width:230px; height:230px;"></a></th>
+            </tr>
+            <tr style="font-size: 25px">
+                <th>LOVE DIVE<br>- 아이브</th>
+                <th>신호등<br> - 이무진</th>
+                <th>i'm so tired...<br> - Lauv, Troye Sivan </th>
+            </tr>
+        </table>
+        <p style="font-size:20px; text-align: center;">*사진을 누르면 뮤직비디오로 이동합니다.</p><br><br><br><br><br><br><br><br></div>
+        <div style="background-color:midnightblue;z-index:-2">
+        <h1 id="3" style="color:white"> Want </h1>
+        <table width="900" align = "center" style="color:white">
+            <tr>
+                <th><img src="{% static 'images/want1.jpeg' %}" style="width:300px; height:230px;border-radius:130px;"></a></th>
+                <th><img src="{% static 'images/want2.jpeg' %}" style="width:300px; height:230px;border-radius:130px;"></a></th>
+                
+            </tr>
+            <tr>
+                <th>열심히 코딩공부🔥<br><br></th>
+                <th>혼자 해외여행✈️<br><br></th>
+                
+            </tr>
+            <tr>
+                <th><img src="{% static 'images/want3.jpeg' %}" style="width:300px; height:230px;border-radius:130px;"></a></th>
+                <th><img src="{% static 'images/want4.jpeg' %}" style="width:300px; height:230px;border-radius:130px;"></a></th>
+            </tr>
+            <tr>
+                <th>국토대장정</th>
+                <th>새로운 취미 만들기</th>
+            </tr>
+        </table><br><br><br><br><br></div>
+        <div style="background-color: white; height:40px; text-align:center; font-size:20px;line-height: 40px">🌼 SEO-YOUNG 🌼</div>
+    </body>
+</html>
